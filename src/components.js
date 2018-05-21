@@ -10,7 +10,7 @@ export class HelloLib extends Component {
     }
 }
 
-export class cdiConfirmModal extends Component { 
+export class CdiConfirmModal extends Component { 
     constructor(props) {
         super(props); 
         this.save = this.save.bind(this);
