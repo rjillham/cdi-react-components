@@ -1,7 +1,7 @@
 import ReactDOM   from 'react-dom';
 import React      from 'react';
 
-import HelloLib from './HelloLib';
+import { HelloLib } from './components';
 
 ReactDOM.render(
     <HelloLib />,
