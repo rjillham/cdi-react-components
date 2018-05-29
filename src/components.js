@@ -43,3 +43,32 @@ export class CdiConfirmModal extends Component {
         );
     }
 }
+
+export class CdiMessageModal extends Component { 
+    constructor(props) {
+        super(props); 
+        this.close = this.close.bind(this);
+    } 
+
+    close () {
+        this.props.onMessageClose(false);
+    }
+
+    render() { 
+        return (
+            <span>
+                <Modal isOpen={this.props.modalState} className={this.props.className}>
+                    <ModalHeader>{this.props.modalData.header}</ModalHeader>
+                    <ModalBody> 
+                        <Label>{this.props.modalData.message}</Label>
+                        <div className="row">
+                            <div className="col text-right">
+                                <Button color="primary" onClick={this.close}>Ok</Button> 
+                            </div>
+                        </div>
+                    </ModalBody> 
+                </Modal>
+            </span>
+        );
+    }
+}
